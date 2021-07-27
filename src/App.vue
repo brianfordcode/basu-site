@@ -1,9 +1,8 @@
 <template>
-  <div id="nav">
+
     <openingScreen/>
     <secondPage/>
     <!-- <router-link to="/">Home</router-link> | -->
-  </div>
   <router-view/>
 </template>
 
