@@ -93,7 +93,8 @@ export default {
         return {
           timer: null,
           position: 0,
-          scrollPos: 0
+          scrollPos: 0,
+          snapping: false,
         }
     },
 
@@ -102,14 +103,17 @@ export default {
         // scroll down
         if ((document.body.getBoundingClientRect()).top < this.scrollPos) {
           this.position += .5
+          this.snapping= false
         } 
         // scroll up
         else if ((document.body.getBoundingClientRect()).top > this.scrollPos) {
           this.position -= .5
+          
         } 
         // snap to 0 if scroll too fast
         if (document.body.getBoundingClientRect().top === 0) {
           this.position = 0
+          this.snapping= true
         }
         this.scrollPos = (document.body.getBoundingClientRect()).top
       },
@@ -212,7 +216,7 @@ p {
 }
 
 .snap {
-  transition: .2s ease-in-out;
+  transition: .08s ease-in-out;
 }
 
 img {
