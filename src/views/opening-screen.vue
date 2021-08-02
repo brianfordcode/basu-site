@@ -2,7 +2,7 @@
 <div class="page-container">
 
   <!-- text box  -->
-  <div class="hero-text">
+  <div class="text-container">
     <img class="logo" src="../assets/basu-logo-white.png" alt="basu-logo">
     <p>Photographer</p>
     <div class="btn" @click="handleClick">View Portfolio</div>
@@ -10,7 +10,10 @@
 
   <!-- background -->
   <div class="background-container">
-    <div class="column"
+    <div :class="{
+      'column': true,
+      'snap': snapping
+    }"
          :style="{
            transform: `translateY(${ position }px)`
          }"
@@ -19,7 +22,10 @@
       <img src="../assets/C1-2.jpg">
       <img src="../assets/C1-3.jpg">
     </div>
-     <div class="column"
+     <div :class="{
+      'column': true,
+      'snap': snapping
+    }"
          :style="{
            transform: `translateY(-${ position }px)`
          }"
@@ -28,7 +34,10 @@
       <img src="../assets/C1-3.jpg">
       <img src="../assets/C2-2.jpg">
     </div>
-    <div class="column"
+    <div :class="{
+      'column': true,
+      'snap': snapping
+    }"
          :style="{
            transform: `translateY(${ position }px)`
          }"
@@ -37,7 +46,10 @@
       <img src="../assets/C3-2.jpg">
       <img src="../assets/C3-3.jpg">
     </div>
-    <div class="column"
+    <div :class="{
+      'column': true,
+      'snap': snapping
+    }"
          :style="{
            transform: `translateY(-${ position }px)`
          }"
@@ -46,7 +58,10 @@
       <img src="../assets/C4-2.jpg">
       <img src="../assets/C4-3.jpg">
     </div>
-    <div class="column"
+    <div :class="{
+      'column': true,
+      'snap': snapping
+    }"
          :style="{
            transform: `translateY(${ position }px)`
          }"
@@ -119,9 +134,10 @@ export default {
    animation: 1s ease-out 0s 1 fadeIn;
 }
 
-.hero-text {
+.text-container {
   position: absolute;
   height: 400px;
+  width: 100%;
   display: flex;
   transform: translateY(50px);
   flex-direction: column;
@@ -130,16 +146,18 @@ export default {
   z-index: 5;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: white;
-  animation: 3s ease-out 0s 1 fadeIn;
+  /* background-color: rgba(255, 255, 255, 0.25); */
 }
 
 .logo {
   height: 150px;
   width: auto;
+  animation: 3s ease-out 0s 1 fadeIn;
 }
 
 p {
   font-size: 30px;
+  animation: 3.5s ease-out 0s 1 fadeIn;
 }
 
 .btn {
@@ -149,6 +167,7 @@ p {
   padding: 15px 30px;
   border-radius: 50px;
   transition: .2s ease-in-out;
+  animation: 4s ease-out 0s 1 fadeIn;
 }
 
 .btn:hover {
@@ -158,6 +177,9 @@ p {
 
 @keyframes fadeIn {
     0% {
+      opacity: 0;
+    }
+    20% {
         opacity: 0;
     }
     100% {
@@ -186,7 +208,11 @@ p {
 
 .column {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+}
+
+.snap {
+  transition: .2s ease-in-out;
 }
 
 img {
