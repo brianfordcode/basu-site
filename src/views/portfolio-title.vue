@@ -1,10 +1,11 @@
 <template>
 <div class="container">
-    <h1 class="portfolio-title">Portfolio</h1>
+    
     <div class="quote-image-wrapper">
         <div class="quote" v-for="quote in quotes" :key="quote">
             <q class="quote-text">{{ quote.quote }}</q>
             <p class="quote-author"> - {{ quote.author }}</p>
+            <h1 class="portfolio-title">Portfolio</h1>
         </div>
         <img class="basu-pic" src="../assets/basu-pic.jpg" alt="basu-pic">
     </div>
@@ -69,7 +70,8 @@ export default {
     color: white;
     font-size: 50px;
     bottom: 0;
-    padding: 20px 10%;
+    padding-bottom: 20px;
+    text-align: left;
 
 }
 

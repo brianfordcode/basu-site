@@ -1,17 +1,19 @@
 <template>
 
     <openingScreen/>
-    <secondPage/>
-    <!-- <router-link to="/">Home</router-link> | -->
-  <router-view/>
+    <portfolioTitle/>
+    <portfolioMain/>
+
+    <router-view/>
 </template>
 
 <script>
 import openingScreen from './views/opening-screen.vue'
-import secondPage from './views/second-page.vue'
+import portfolioTitle from './views/portfolio-title.vue'
+import portfolioMain from './views/portfolio-main.vue'
 
 export default {
-  components: { openingScreen, secondPage }
+  components: { openingScreen, portfolioTitle, portfolioMain }
 }
 
 </script>

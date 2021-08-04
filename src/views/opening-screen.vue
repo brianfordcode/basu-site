@@ -102,12 +102,12 @@ export default {
       handleScroll() {
         // scroll down
         if ((document.body.getBoundingClientRect()).top < this.scrollPos) {
-          this.position += .5
+          this.position += 1
           this.snapping= false
         } 
         // scroll up
         else if ((document.body.getBoundingClientRect()).top > this.scrollPos) {
-          this.position -= .5
+          this.position -= 1.5
           
         } 
         // snap to 0 if scroll too fast
