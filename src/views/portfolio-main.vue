@@ -1,11 +1,12 @@
 <template>
 
   <div class="container">
+      
+    <!-- FIRST COLUMN -->
     <div class="headshots column">
         <div class="img-container">
           <router-link to="/"><img class="col-img" src="../assets/1-shweta-chauhan-human-resource-specialist-grey.jpg" alt="headshots"></router-link>  
         </div>
-      
       <div class="text">
         <h1 class="col-title">Headshots</h1>
         <p class="col-text">
@@ -16,6 +17,7 @@
         </p>  
       </div>
     </div>
+    <!-- SECOND COLUMN -->
     <div class="headshots column">
       <div class="img-container">
         <router-link to="/"><img class="col-img" src="../assets/23-ria-dixit-personal-stylist-3.jpg" alt="headshots"></router-link>
@@ -30,8 +32,6 @@
         </p>  
       </div>
     </div>
-    
-
 
   </div>
 
@@ -72,10 +72,11 @@ export default {
     overflow: hidden;
     height: 400px;
     width: 500px;
+    position: relative;
 }
 
 .col-img {
-  width: 500px;
+  width: 100%;
   height: auto;
   transition: .2s ease-in-out;
 }

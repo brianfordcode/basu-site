@@ -107,7 +107,7 @@ export default {
         } 
         // scroll up
         else if ((document.body.getBoundingClientRect()).top > this.scrollPos) {
-          this.position -= 1.5
+          this.position -= 1
           
         } 
         // snap to 0 if scroll too fast
@@ -129,7 +129,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .page-container {
   background-color: rgb(18, 25, 31);
   display: flex;

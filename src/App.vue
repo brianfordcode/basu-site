@@ -26,4 +26,13 @@ export default {
   margin: 0;
 }
 
+.before-enter {
+    opacity: 0;
+    transition: all 2s ease-out;
+}
+
+.enter {
+    opacity: 1;
+}
+
 </style>
