@@ -1,11 +1,15 @@
 <template>
 
-  <div class="container">
-      
+  <div class="menu"  @click="displayMenu" v-if="!display">Back</div>
+  
+
+
+  <div class="container" v-if="display">
+    
     <!-- FIRST COLUMN -->
     <div class="headshots column">
         <div class="img-container">
-          <router-link to="/"><img class="col-img" src="../assets/1-shweta-chauhan-human-resource-specialist-grey.jpg" alt="headshots"></router-link>  
+          <router-link to="/about"><img @click="displayMenu" class="col-img" src="../assets/1-shweta-chauhan-human-resource-specialist-grey.jpg" alt="headshots"></router-link>
         </div>
       <div class="text">
         <h1 class="col-title">Headshots</h1>
@@ -20,7 +24,7 @@
     <!-- SECOND COLUMN -->
     <div class="headshots column">
       <div class="img-container">
-        <router-link to="/"><img class="col-img" src="../assets/23-ria-dixit-personal-stylist-3.jpg" alt="headshots"></router-link>
+        <router-link to="/about"><img @click="displayMenu" class="col-img" src="../assets/23-ria-dixit-personal-stylist-3.jpg" alt="headshots"></router-link>
       </div>
       <div class="text">
         <h1 class="col-title">Personal Branding</h1>
@@ -40,6 +44,19 @@
 
 <script>
 export default {
+  data() {
+    return {
+      display: true,
+    }
+    
+  },
+  methods: {
+    displayMenu() {
+      this.display = !this.display,
+      console.log('click')
+      this.$router.push('/home')
+    }
+  }
 
 }
 </script>
@@ -50,6 +67,10 @@ export default {
     margin: 0;
     padding: 0;
 }
+
+.menu {
+}
+
 
 .container {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

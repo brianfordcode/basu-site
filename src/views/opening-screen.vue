@@ -102,12 +102,12 @@ export default {
       handleScroll() {
         // scroll down
         if ((document.body.getBoundingClientRect()).top < this.scrollPos) {
-          this.position += 1
+          this.position += .5
           this.snapping= false
         } 
         // scroll up
         else if ((document.body.getBoundingClientRect()).top > this.scrollPos) {
-          this.position -= 1
+          this.position -= .5
           
         } 
         // snap to 0 if scroll too fast
@@ -122,9 +122,6 @@ export default {
         console.log('click')
       }
 
-
-
-
     }
 }
 </script>
@@ -135,7 +132,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-   animation: 1s ease-out 0s 1 fadeIn;
+  animation: 1s ease-out 0s 1 fadeIn;
 }
 
 .text-container {
