@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>This is the HEADSHOTS page</h1>
+    <h1>This is the BRANDING page</h1>
   </div>
 </template>
 
