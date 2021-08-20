@@ -3,8 +3,7 @@
     <openingScreen/>
     <portfolioTitle/>
     <portfolioMain/>
-
-    <router-view/>
+    
 </template>
 
 <script>

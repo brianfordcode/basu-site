@@ -1,13 +1,15 @@
 <template>
 
-  <div class="menu"  @click="displayMenu" v-if="!display">Back</div>
+  <div class="menu"  @click="display = !display" v-if="!display">Back</div>
   
   <div class="container" v-if="display">
     
     <!-- FIRST COLUMN -->
     <div class="headshots column">
         <div class="img-container">
-          <router-link to="/headshots"><img @click="displayMenu" class="col-img" src="../assets/1-shweta-chauhan-human-resource-specialist-grey.jpg" alt="headshots"></router-link>
+          <router-link to="/headshots">
+          <img @click=" display = !display" class="col-img" src="../assets/1-shweta-chauhan-human-resource-specialist-grey.jpg" alt="headshots">
+          </router-link>
         </div>
       <div class="text">
         <h1 class="col-title">Headshots</h1>
@@ -22,7 +24,7 @@
     <!-- SECOND COLUMN -->
     <div class="headshots column">
       <div class="img-container">
-        <router-link to="/branding"><img @click="displayMenu" class="col-img" src="../assets/23-ria-dixit-personal-stylist-3.jpg" alt="headshots"></router-link>
+        <router-link to="/branding"><img @click=" display = !display" class="col-img" src="../assets/23-ria-dixit-personal-stylist-3.jpg" alt="headshots"></router-link>
       </div>
       <div class="text">
         <h1 class="col-title">Personal Branding</h1>
@@ -35,11 +37,11 @@
       </div>
     </div>
 
-    <div @click="toNewPage">click me</div>
-
   </div>
 
-  
+  <router-view v-if="!display"/>
+
+
 </template>
 
 <script>
@@ -51,17 +53,7 @@ export default {
     
   },
   methods: {
-    displayMenu() {
-      this.display = !this.display
-      console.log(this.display)
 
-      // router.push('home')
-
-    },
-    toNewPage() {
-      this.$router.push({ name: 'Headshots' })
-
-    }
   }
 
 }
@@ -72,9 +64,6 @@ export default {
 * {
     margin: 0;
     padding: 0;
-}
-
-.menu {
 }
 
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="headshots-container">
     <h1>This is the HEADSHOTS page</h1>
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style scoped>
-  .container {
+  .headshots-container {
     height: 1000px;
     border: 1px solid blue;
   }
