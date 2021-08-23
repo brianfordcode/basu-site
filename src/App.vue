@@ -3,6 +3,7 @@
     <openingScreen/>
     <portfolioTitle/>
     <portfolioMain/>
+    <div class="another-page"></div>
     
 </template>
 
@@ -23,6 +24,11 @@ export default {
 * {
   padding: 0;
   margin: 0;
+}
+
+.another-page {
+  background-color: black;
+  height: 1000px;
 }
 
 .before-enter {

@@ -113,4 +113,8 @@ export default {
     font-size: 14px;
 }
 
+.menu {
+  height: 100px;
+}
+
 </style>

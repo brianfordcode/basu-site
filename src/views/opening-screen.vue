@@ -18,9 +18,9 @@
            transform: `translateY(${ position }px)`
          }"
     >
-      <img src="../assets/C1-1.jpg">
-      <img src="../assets/C1-2.jpg">
-      <img src="../assets/C1-3.jpg">
+      <img src="../assets/opening-screen/C1-1.jpg">
+      <img src="../assets/opening-screen/C1-2.jpg">
+      <img src="../assets/opening-screen/C1-3.jpg">
     </div>
      <div :class="{
       'column': true,
@@ -30,9 +30,9 @@
            transform: `translateY(-${ position }px)`
          }"
     >
-      <img src="../assets/C2-1.jpg">
-      <img src="../assets/C1-3.jpg">
-      <img src="../assets/C2-2.jpg">
+      <img src="../assets/opening-screen/C2-1.jpg">
+      <img src="../assets/opening-screen/C1-3.jpg">
+      <img src="../assets/opening-screen/C2-2.jpg">
     </div>
     <div :class="{
       'column': true,
@@ -42,9 +42,9 @@
            transform: `translateY(${ position }px)`
          }"
       >
-      <img src="../assets/C3-1.jpg">
-      <img src="../assets/C3-2.jpg">
-      <img src="../assets/C3-3.jpg">
+      <img src="../assets/opening-screen/C3-1.jpg">
+      <img src="../assets/opening-screen/C3-2.jpg">
+      <img src="../assets/opening-screen/C3-3.jpg">
     </div>
     <div :class="{
       'column': true,
@@ -54,9 +54,9 @@
            transform: `translateY(-${ position }px)`
          }"
     >
-      <img src="../assets/C4-1.jpg">
-      <img src="../assets/C4-2.jpg">
-      <img src="../assets/C4-3.jpg">
+      <img src="../assets/opening-screen/C4-1.jpg">
+      <img src="../assets/opening-screen/C4-2.jpg">
+      <img src="../assets/opening-screen/C4-3.jpg">
     </div>
     <div :class="{
       'column': true,
@@ -66,9 +66,9 @@
            transform: `translateY(${ position }px)`
          }"
       >
-      <img src="../assets/C5-1.jpg">
-      <img src="../assets/C5-2.jpg">
-      <img src="../assets/C5-3.jpg">
+      <img src="../assets/opening-screen/C5-1.jpg">
+      <img src="../assets/opening-screen/C5-2.jpg">
+      <img src="../assets/opening-screen/C5-3.jpg">
     </div>
   </div>
 
