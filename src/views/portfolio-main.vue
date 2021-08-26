@@ -39,7 +39,7 @@
 
   </div>
 
-  <router-view v-if="!display"/>
+  
 
 
 </template>
